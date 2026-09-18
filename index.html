@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>吳越春秋 · 君臣关系 / 政治内容占比分析</title>
+<style>
+:root{--ink:#1c1a17;--paper:#f6f1e6;--line:#d8cdb4;--accent:#8c2f1e;--gold:#a8791f;--muted:#6b6253}
+*{box-sizing:border-box}
+body{margin:0;background:var(--paper);color:var(--ink);font-family:"Noto Serif SC","Songti SC",Georgia,serif;line-height:1.75}
+.wrap{max-width:980px;margin:0 auto;padding:48px 22px 80px}
+h1{font-size:1.9rem;margin:0 0 4px}
+.sub{color:var(--muted);margin:0 0 28px}
+h2{font-size:1.15rem;border-bottom:2px solid var(--line);padding-bottom:6px;margin-top:44px}
+h3{font-size:.95rem;margin:18px 0 6px;color:var(--accent)}
+.cards{display:flex;gap:14px;flex-wrap:wrap;margin:22px 0}
+.card{flex:1 1 170px;background:#fff;border:1px solid var(--line);border-radius:10px;padding:16px 18px}
+.card .n{font-size:1.9rem;font-weight:700;color:var(--accent);line-height:1.1}
+.card .lab{font-size:.8rem;color:var(--muted);margin-top:4px}
+.track{background:#e7ddc7;border-radius:6px;height:11px;overflow:hidden;display:inline-block;vertical-align:middle;min-width:90px;width:100%}
+.fill{height:100%;background:linear-gradient(90deg,#c05a40,#8c2f1e)}
+.fill.court{background:linear-gradient(90deg,#b3714b,#8a4a2a)}
+.fill.mid{background:linear-gradient(90deg,#c99a3a,#a8791f)}
+.fill.other{background:linear-gradient(90deg,#7d9a63,#4c6b33)}
+table{border-collapse:collapse;width:100%;font-size:.92rem}
+td,th{border-bottom:1px solid var(--line);padding:6px 8px;text-align:right}
+th{color:var(--muted);font-weight:600;font-size:.8rem}
+td.l,th.l{text-align:left}
+td.z{color:#c3b89f}
+td.bc{white-space:nowrap}
+td.bc .track{width:110px;margin-right:8px}
+td.bc span{color:var(--muted);font-size:.82rem}
+.grid{font-size:.85rem}
+.bk{display:flex;flex-wrap:wrap;gap:10px 26px;align-items:center;margin:14px 0}
+.bk .track{width:110px;margin:0 8px}
+.chip{display:inline-block;background:#fff;border:1px solid var(--line);border-radius:14px;padding:2px 10px;margin:3px 5px 3px 0;font-size:.85rem}
+.chip b{color:var(--accent)}
+.two{display:flex;gap:26px;flex-wrap:wrap}
+.two>div{flex:1 1 300px}
+.note{background:#fff;border-left:4px solid var(--gold);padding:12px 16px;font-size:.9rem;color:var(--muted);margin-top:16px}
+ul{padding-left:22px}
+footer{margin-top:48px;color:var(--muted);font-size:.82rem;border-top:1px solid var(--line);padding-top:14px}
+code{background:#efe7d5;padding:1px 5px;border-radius:4px}
+</style>
+</head>
+<body>
+<div class="wrap">
+<h1>《吳越春秋》的「君臣」與政治含量</h1>
+<p class="sub">How much of the <i>Wu Yue Chunqiu</i> is about the
+ruler–minister relationship? A keyword measurement of a 10-卷 Chinese
+historical source (後漢 趙曄 撰, public domain).</p>
+
+<div class="cards">
+  <div class="card"><div class="n">74.3%</div><div class="lab">政治句占比<br>political sentences: 1698 / 2286</div></div>
+  <div class="card"><div class="n">16.5%</div><div class="lab">君臣同现（最严格）<br>ruler + minister: 377 sentences</div></div>
+  <div class="card"><div class="n">21.3%</div><div class="lab">君臣言论（君主或臣下的对话）<br>court speech: 487</div></div>
+  <div class="card"><div class="n">25.7%</div><div class="lab">非政治內容（其他）<br>non-political: 588 sentences</div></div>
+  <div class="card"><div class="n">43.1%</div><div class="lab">含「曰 /「」的對話句<br>direct-speech sentences</div></div>
+</div>
+
+<h2>問題与方法</h2>
+<p>問題：全书有多少内容在写 <b>君臣关系</b>（即政治），多少在写其他方面？<br>
+方法：把 10 卷全文切成 2286 個句子，给每句打三张小词典的标签 ——
+<code>君/王/孤/寡人/阖闾/勾践…</code>（RULER）、<code>臣/大夫/相国/伍子胥/范蠡…</code>（MINISTER）、
+<code>国/政/兵/战/伐/谏/赏/罚…</code>（POLITY）—— 并标出是否含「曰」（言论），再分入四类：</p>
+<ul>
+<li><b>君臣同现</b>：一句中同时出现 RULER 与 MINISTER 词。这是君臣关系本身（谏诤、任命、赏罚、赐死）。</li>
+<li><b>君臣言论</b>：君主或臣下的直接对话，但未出现对方的称谓（对手往往省略）。</li>
+<li><b>政治·其他</b>：出现 POLITY 词（战争、外交、国政），或仅仅提及君主/臣下（政治背景与人事）。</li>
+<li><b>其他</b>：以上皆无（神话起源、地理、工艺、人物身世、诗赋等）。</li>
+</ul>
+<p>政治含量 = 前三类之和。全部为词频统计；词典与局限列在页末，可逐句复核。</p>
+
+<h2>全书占比</h2>
+<p class='bk'><b>君臣同现</b> 377 (16.5%) <div class="track"><div class="fill pol" style="width:16.5%"></div></div><b>君臣言论</b> 487 (21.3%) <div class="track"><div class="fill court" style="width:21.3%"></div></div><b>政治·其他</b> 834 (36.5%) <div class="track"><div class="fill mid" style="width:36.5%"></div></div><b>其他</b> 588 (25.7%) <div class="track"><div class="fill other" style="width:25.7%"></div></div></p>
+<p>政治 1698 句（74.3%）；约 <b>80.8%</b> 的汉字落在政治句内。
+其中严格的君臣同现 16.5%，君臣言论 21.3%，国政军事等 36.5%；非政治 25.7%。</p>
+
+<h2>各卷政治含量</h2>
+<table class="grid"><thead><tr><th class="l">卷</th><th>句数</th><th>同现</th><th>言论</th><th>政治</th><th>其他</th><th>政治%</th></tr></thead>
+<tbody><tr><td class='l'>卷第一吴太伯传</td><td>62</td><td>0</td><td>3</td><td>25</td><td>34</td><td class='bc'><div class="track"><div class="fill pol" style="width:45.2%"></div></div><span>45.2%</span></td></tr><tr><td class='l'>卷第二吴王寿梦传</td><td>52</td><td>3</td><td>16</td><td>24</td><td>9</td><td class='bc'><div class="track"><div class="fill pol" style="width:82.7%"></div></div><span>82.7%</span></td></tr><tr><td class='l'>卷第三王僚使公子光传</td><td>242</td><td>27</td><td>61</td><td>75</td><td>79</td><td class='bc'><div class="track"><div class="fill pol" style="width:67.4%"></div></div><span>67.4%</span></td></tr><tr><td class='l'>卷第四阖闾内传</td><td>446</td><td>75</td><td>110</td><td>158</td><td>103</td><td class='bc'><div class="track"><div class="fill pol" style="width:76.9%"></div></div><span>76.9%</span></td></tr><tr><td class='l'>卷第五夫差内传</td><td>416</td><td>87</td><td>85</td><td>155</td><td>89</td><td class='bc'><div class="track"><div class="fill pol" style="width:78.6%"></div></div><span>78.6%</span></td></tr><tr><td class='l'>卷第六越王无余外传</td><td>108</td><td>1</td><td>6</td><td>38</td><td>63</td><td class='bc'><div class="track"><div class="fill pol" style="width:41.7%"></div></div><span>41.7%</span></td></tr><tr><td class='l'>卷第七勾践入臣外传</td><td>265</td><td>70</td><td>40</td><td>90</td><td>65</td><td class='bc'><div class="track"><div class="fill pol" style="width:75.5%"></div></div><span>75.5%</span></td></tr><tr><td class='l'>卷第八勾践归国外传</td><td>119</td><td>22</td><td>29</td><td>47</td><td>21</td><td class='bc'><div class="track"><div class="fill pol" style="width:82.4%"></div></div><span>82.4%</span></td></tr><tr><td class='l'>卷第九勾践阴谋外传</td><td>219</td><td>40</td><td>58</td><td>68</td><td>53</td><td class='bc'><div class="track"><div class="fill pol" style="width:75.8%"></div></div><span>75.8%</span></td></tr><tr><td class='l'>卷第十勾践伐吴外传</td><td>357</td><td>52</td><td>79</td><td>154</td><td>72</td><td class='bc'><div class="track"><div class="fill pol" style="width:79.8%"></div></div><span>79.8%</span></td></tr></tbody></table>
+<p class="note">卷第一（吳太伯）与卷第六（越王無余）政治比例最低，因以始祖神话为主；卷八（勾践归国）、卷十（勾践伐吴）最高，因其内容几乎全是复国、伐吴的君臣谋划。整体呈「越到后段、君臣谋划越密」的趋势，与全书由吴转越的叙事重心一致。</p>
+
+<h2>最常出现的二字词（前 30）</h2>
+<div class="two">
+  <div><table><tbody><tr><td class='l'>越王</td><td>193</td></tr><tr><td class='l'>吴王</td><td>178</td></tr><tr><td class='l'>子胥</td><td>165</td></tr><tr><td class='l'>王曰</td><td>128</td></tr><tr><td class='l'>大夫</td><td>117</td></tr><tr><td class='l'>大王</td><td>81</td></tr><tr><td class='l'>寡人</td><td>80</td></tr><tr><td class='l'>诸侯</td><td>70</td></tr><tr><td class='l'>王之</td><td>68</td></tr><tr><td class='l'>范蠡</td><td>66</td></tr><tr><td class='l'>曰吾</td><td>62</td></tr><tr><td class='l'>曰臣</td><td>61</td></tr><tr><td class='l'>胥曰</td><td>61</td></tr><tr><td class='l'>于是</td><td>60</td></tr><tr><td class='l'>臣闻</td><td>50</td></tr><tr><td class='l'>不可</td><td>48</td></tr><tr><td class='l'>勾践</td><td>48</td></tr><tr><td class='l'>太子</td><td>47</td></tr><tr><td class='l'>阖闾</td><td>47</td></tr><tr><td class='l'>而不</td><td>47</td></tr><tr><td class='l'>天下</td><td>46</td></tr><tr><td class='l'>人之</td><td>45</td></tr><tr><td class='l'>宰嚭</td><td>42</td></tr><tr><td class='l'>于吴</td><td>41</td></tr><tr><td class='l'>夫种</td><td>38</td></tr><tr><td class='l'>子之</td><td>37</td></tr><tr><td class='l'>不知</td><td>37</td></tr><tr><td class='l'>国之</td><td>36</td></tr><tr><td class='l'>太宰</td><td>35</td></tr><tr><td class='l'>以为</td><td>34</td></tr></tbody></table></div>
+  <div><h3>关键词频次</h3><h3>RULER</h3><p><span class='chip'>王 <b>884</b></span><span class='chip'>君 <b>225</b></span><span class='chip'>越王 <b>193</b></span><span class='chip'>吴王 <b>178</b></span><span class='chip'>孤 <b>89</b></span><span class='chip'>大王 <b>81</b></span><span class='chip'>寡人 <b>80</b></span><span class='chip'>勾践 <b>48</b></span><span class='chip'>阖闾 <b>47</b></span><span class='chip'>君王 <b>26</b></span><span class='chip'>主 <b>25</b></span><span class='chip'>夫差 <b>23</b></span><span class='chip'>王僚 <b>23</b></span><span class='chip'>季札 <b>19</b></span><span class='chip'>公子光 <b>14</b></span><span class='chip'>寿梦 <b>11</b></span><span class='chip'>诸樊 <b>10</b></span><span class='chip'>元常 <b>9</b></span></p><h3>MINISTER</h3><p><span class='chip'>臣 <b>357</b></span><span class='chip'>子胥 <b>165</b></span><span class='chip'>大夫 <b>117</b></span><span class='chip'>范蠡 <b>66</b></span><span class='chip'>大夫种 <b>38</b></span><span class='chip'>太宰 <b>35</b></span><span class='chip'>太宰嚭 <b>35</b></span><span class='chip'>伍子胥 <b>23</b></span><span class='chip'>专诸 <b>21</b></span><span class='chip'>要离 <b>20</b></span><span class='chip'>相国 <b>18</b></span><span class='chip'>子常 <b>16</b></span><span class='chip'>白喜 <b>14</b></span><span class='chip'>伍胥 <b>13</b></span><span class='chip'>申包胥 <b>12</b></span><span class='chip'>庆忌 <b>12</b></span><span class='chip'>文种 <b>11</b></span><span class='chip'>孙武 <b>11</b></span></p><h3>POLITY</h3><p><span class='chip'>国 <b>324</b></span><span class='chip'>伐 <b>122</b></span><span class='chip'>兵 <b>104</b></span><span class='chip'>民 <b>94</b></span><span class='chip'>军 <b>89</b></span><span class='chip'>令 <b>82</b></span><span class='chip'>杀 <b>82</b></span><span class='chip'>师 <b>77</b></span><span class='chip'>谋 <b>72</b></span><span class='chip'>战 <b>70</b></span><span class='chip'>诸侯 <b>70</b></span><span class='chip'>忠 <b>49</b></span><span class='chip'>会 <b>49</b></span><span class='chip'>诛 <b>43</b></span><span class='chip'>政 <b>40</b></span><span class='chip'>城 <b>38</b></span><span class='chip'>谏 <b>36</b></span><span class='chip'>霸 <b>36</b></span></p></div>
+</div>
+
+<h2>人物／职官提及次数与分布</h2>
+<table class='grid'><thead><tr><th></th><th>1</th><th>2</th><th>3</th><th>4</th><th>5</th><th>6</th><th>7</th><th>8</th><th>9</th><th>10</th><th>Σ</th></tr></thead><tbody><tr><td class='l'>勾践</td><td class='z'>.</td><td class='z'>.</td><td class='z'>.</td><td class='z'>.</td><td>7</td><td class='z'>.</td><td>6</td><td>3</td><td>9</td><td>23</td><td><b>48</b></td></tr><tr><td class='l'>夫差</td><td class='z'>.</td><td class='z'>.</td><td class='z'>.</td><td>4</td><td>7</td><td class='z'>.</td><td>3</td><td class='z'>.</td><td class='z'>.</td><td>9</td><td><b>23</b></td></tr><tr><td class='l'>阖闾</td><td class='z'>.</td><td class='z'>.</td><td>2</td><td>42</td><td>1</td><td>1</td><td class='z'>.</td><td>1</td><td class='z'>.</td><td class='z'>.</td><td><b>47</b></td></tr><tr><td class='l'>伍子胥</td><td class='z'>.</td><td class='z'>.</td><td>4</td><td>6</td><td>4</td><td class='z'>.</td><td>3</td><td class='z'>.</td><td class='z'>.</td><td>6</td><td><b>23</b></td></tr><tr><td class='l'>子胥</td><td class='z'>.</td><td class='z'>.</td><td>42</td><td>54</td><td>40</td><td class='z'>.</td><td>6</td><td>3</td><td>9</td><td>11</td><td><b>165</b></td></tr><tr><td class='l'>范蠡</td><td class='z'>.</td><td class='z'>.</td><td class='z'>.</td><td class='z'>.</td><td>2</td><td class='z'>.</td><td>25</td><td>13</td><td>7</td><td>19</td><td><b>66</b></td></tr><tr><td class='l'>文种</td><td class='z'>.</td><td class='z'>.</td><td class='z'>.</td><td class='z'>.</td><td class='z'>.</td><td class='z'>.</td><td>3</td><td class='z'>.</td><td>1</td><td>7</td><td><b>11</b></td></tr><tr><td class='l'>申包胥</td><td class='z'>.</td><td class='z'>.</td><td>3</td><td>5</td><td class='z'>.</td><td class='z'>.</td><td class='z'>.</td><td class='z'>.</td><td class='z'>.</td><td>4</td><td><b>12</b></td></tr><tr><td class='l'>孙武</td><td class='z'>.</td><td class='z'>.</td><td class='z'>.</td><td>11</td><td class='z'>.</td><td class='z'>.</td><td class='z'>.</td><td class='z'>.</td><td class='z'>.</td><td class='z'>.</td><td><b>11</b></td></tr><tr><td class='l'>专诸</td><td class='z'>.</td><td class='z'>.</td><td>20</td><td>1</td><td class='z'>.</td><td class='z'>.</td><td class='z'>.</td><td class='z'>.</td><td class='z'>.</td><td class='z'>.</td><td><b>21</b></td></tr><tr><td class='l'>越王</td><td class='z'>.</td><td class='z'>.</td><td class='z'>.</td><td>3</td><td>29</td><td class='z'>.</td><td>47</td><td>22</td><td>48</td><td>44</td><td><b>193</b></td></tr><tr><td class='l'>吴王</td><td class='z'>.</td><td>3</td><td>5</td><td>38</td><td>69</td><td>1</td><td>31</td><td>7</td><td>15</td><td>9</td><td><b>178</b></td></tr><tr><td class='l'>大夫</td><td class='z'>.</td><td>1</td><td>1</td><td>8</td><td>19</td><td class='z'>.</td><td>29</td><td>11</td><td>19</td><td>29</td><td><b>117</b></td></tr><tr><td class='l'>太宰</td><td class='z'>.</td><td class='z'>.</td><td class='z'>.</td><td class='z'>.</td><td>17</td><td class='z'>.</td><td>11</td><td class='z'>.</td><td>6</td><td>1</td><td><b>35</b></td></tr><tr><td class='l'>相国</td><td class='z'>.</td><td class='z'>.</td><td class='z'>.</td><td class='z'>.</td><td>1</td><td class='z'>.</td><td>6</td><td>4</td><td>3</td><td>4</td><td><b>18</b></td></tr><tr><td class='l'>司马</td><td class='z'>.</td><td class='z'>.</td><td>1</td><td>3</td><td>1</td><td class='z'>.</td><td class='z'>.</td><td>1</td><td class='z'>.</td><td class='z'>.</td><td><b>6</b></td></tr><tr><td class='l'>君王</td><td class='z'>.</td><td class='z'>.</td><td class='z'>.</td><td>1</td><td>1</td><td class='z'>.</td><td>7</td><td>1</td><td>6</td><td>10</td><td><b>26</b></td></tr><tr><td class='l'>群臣</td><td class='z'>.</td><td class='z'>.</td><td class='z'>.</td><td>4</td><td class='z'>.</td><td class='z'>.</td><td class='z'>.</td><td class='z'>.</td><td class='z'>.</td><td class='z'>.</td><td><b>4</b></td></tr><tr><td class='l'>诸侯</td><td>1</td><td>4</td><td>9</td><td>11</td><td>11</td><td>2</td><td>4</td><td>7</td><td>6</td><td>15</td><td><b>70</b></td></tr></tbody></table>
+<p class="note">数字为各卷中的出现次数，重名会重叠（「子胥」也计入「伍子胥」）。可看出：伍子胥、夫差集中于卷三至卷五的吴国叙事；范蠡、文种、勾践集中于卷七至卷十的越国叙事 —— 这正是全书结构由吴转越、由「君择臣」转向「臣事君」的体现。</p>
+
+<h2>局限</h2>
+<ul>
+<li>古汉语无词间空格，二字词只是近似；重叠人名会重复计数。</li>
+<li>词表法可能把非政治语境的词计入（如「师」在「农师」、「使」作派遣/使者），因此政治占比是粗略代理，不是逐句判断。</li>
+<li>引号内以「．」断句，会把长段对话切成若干残句；「君臣言论」一类正是为回收这类残句而设。</li>
+<li>底本为简体排印本，仍有少量 OCR 缺字与私用区字形。</li>
+<li>「政治」在本页定义为「君臣关系 + 君臣言论 + 国政军事」，是一种可操作化的选择，并非唯一标准。</li>
+</ul>
+
+<footer>
+数据源：趙曄《吳越春秋》（後漢，10 卷，约 38756 汉字），公有领域；
+文本取自殆知閣古代文獻庫 <code>garychowcmu/daizhigev20</code>（经 jsDelivr 镜像下载）。<br>
+方法：纯词典／词频统计，脚本 <code>analyze.py</code>；完整数字见 <code>analysis_results.txt</code>。 Course DHG502.
+</footer>
+</div>
+</body>
+</html>
