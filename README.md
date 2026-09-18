@@ -86,6 +86,3 @@ result easier to read.
 ## Notes
 
 * The source is public domain.
-* No API key is stored in this repository; the analysis is fully local.
-* This is a deliberately simple, explainable method: a keyword proxy for a
-  literary question, not a final judgement.
