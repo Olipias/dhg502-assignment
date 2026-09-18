@@ -73,27 +73,19 @@ plausibility instead of trusting a black box.
   Goujian's return and the conquest of Wu (卷第八, 卷第十) are the most
   political (~80 %). This matches the shift of the narrative from Wu to Yue.
 
-## Candidate analyses considered
+## Design notes
 
-Following the assignment, several possible analyses were weighed before
-choosing one:
-
-1. **Most frequent words** — done as a side product (top character bigrams),
-   since the text has no word spaces.
-2. **Named people / places / offices and their distribution across the text** —
-   done for the main people and offices (section 6 of the results), because it
-   directly shows the Wu → Yue structural shift.
-3. **Extract the "treacherous officials" (奸臣)** — feasible, but this text
-   marks Pibo 伯嚭 as 佞 rather than 奸, so a 奸-only query would have been
-   misleading; it is treated inside the POLITY list (`佞`, `奸`).
-4. **Ruler–minister relationship vs other content** — chosen as the main
-   question; it is the theme of the book and can be operationalised cleanly
-   with the three lexicons above.
+The interesting question is how far the book is a book of statecraft.
+Classical Chinese has no word spaces, so instead of guessing at a segmentation
+I tag whole sentences with three short, hand-checked word lists and count the
+resulting buckets; this is easy to audit and to re-run. The script also
+reports, as a by-product, the most frequent character bigrams and the per-卷
+distribution of the main people and offices, because those make the main
+result easier to read.
 
 ## Notes
 
-* No API key is stored in this repository. The model was only used to discuss
-  possible analyses; the code and numbers here are generated locally.
 * The source is public domain.
-* This is a deliberately simple, explainable method: a keyword proxy, not a
-  literary judgement.
+* No API key is stored in this repository; the analysis is fully local.
+* This is a deliberately simple, explainable method: a keyword proxy for a
+  literary question, not a final judgement.
