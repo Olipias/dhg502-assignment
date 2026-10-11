@@ -1,2 +1,12 @@
+# Python
 __pycache__/
 *.pyc
+
+# OS / temp files
+.DS_Store
+~$*
+*:Zone.Identifier
+
+# Copyrighted reference articles (not redistributed)
+DIDACTIC_NARRATIVE_AND_THE_ART.pdf
+Unlocking the Archives Large Language Models.pdf

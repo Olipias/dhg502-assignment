@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>夫差 vs 勾践 · 搭配詞下的兩個國君</title>
+<style>
+:root{--ink:#1c1a17;--paper:#f6f1e6;--line:#d8cdb4;--accent:#8c2f1e;--gold:#a8791f;--muted:#6b6253;--blue:#2f4b7c}
+*{box-sizing:border-box}
+body{margin:0;background:var(--paper);color:var(--ink);font-family:"Noto Serif SC","Songti SC",Georgia,serif;line-height:1.8}
+.wrap{max-width:1040px;margin:0 auto;padding:48px 22px 80px}
+h1{font-size:1.85rem;margin:0 0 4px}
+.sub{color:var(--muted);margin:0 0 26px}
+h2{font-size:1.2rem;border-bottom:2px solid var(--line);padding-bottom:6px;margin-top:46px}
+h3{font-size:1rem;margin:20px 0 6px;color:var(--accent)}
+.cards{display:flex;gap:14px;flex-wrap:wrap;margin:22px 0}
+.card{flex:1 1 150px;background:#fff;border:1px solid var(--line);border-radius:10px;padding:14px 18px}
+.card .n{font-size:1.7rem;font-weight:700;color:var(--accent);line-height:1.15}
+.card.fc .n{color:var(--blue)}
+.card .lab{font-size:.8rem;color:var(--muted);margin-top:4px}
+table{border-collapse:collapse;width:100%;font-size:.85rem}
+td,th{border-bottom:1px solid var(--line);padding:6px 7px;text-align:right;vertical-align:top}
+th{color:var(--muted);font-weight:600;font-size:.75rem;white-space:nowrap}
+td.w{text-align:left;font-weight:700;font-size:.95rem;white-space:nowrap}
+td .note{font-weight:400;font-size:.72rem;color:var(--muted);max-width:190px;white-space:normal}
+td.p{color:var(--accent)}
+.kw{color:var(--accent);margin:12px 0 0;font-size:.9rem}
+.kwic{list-style:none;padding:0;margin:4px 0 4px 0}
+.kwic li{background:#fff;border-left:3px solid var(--gold);padding:6px 12px;margin:5px 0;font-size:.84rem;color:#3a352d}
+.cluster{background:#fff;border:1px solid var(--line);border-radius:10px;padding:8px 20px 16px;margin:14px 0}
+.tag{display:inline-block;background:#efe7d5;color:var(--accent);border-radius:12px;padding:1px 10px;font-size:.78rem;margin:0 5px 0 0}
+.cmp{width:100%;font-size:.88rem}
+.cmp th{text-align:left}
+.cmp td:first-child{font-weight:700}
+.note-box{background:#fff;border-left:4px solid var(--gold);padding:12px 16px;font-size:.9rem;color:var(--muted);margin-top:16px}
+ul{padding-left:22px}
+footer{margin-top:48px;color:var(--muted);font-size:.82rem;border-top:1px solid var(--line);padding-top:14px}
+code{background:#efe7d5;padding:1px 5px;border-radius:4px}
+</style>
+</head>
+<body>
+<div class="wrap">
+<h1>夫差 vs 勾践：搭配詞裡的两个国君</h1>
+<p class="sub">Collocational profiles of the two rulers in the <i>Wu Yue Chunqiu</i>
+(window 5, Fisher exact one-sided, BH-FDR, function words removed, p &lt; 0.05).</p>
+
+<div class="cards">
+  <div class="card"><div class="n">44</div><div class="lab">「勾践」词次 · 显著搭配 11</div></div>
+  <div class="card fc"><div class="n">23</div><div class="lab">「夫差」词次 · 显著搭配 9</div></div>
+  <div class="card"><div class="n">0</div><div class="lab">两人共享的显著搭配词<br>shared collocates</div></div>
+  <div class="card"><div class="n">64</div><div class="lab">含这两个人名的句子（合计）<br>sentences</div></div>
+</div>
+
+<p>两人在同一语料、同一参数下跑 <code>find_collocates</code>。结果几乎不重叠：
+勾践的显著搭配是 <b>东海、范蠡、役、下臣、稽首、闻于、再拜、臣、不忍、二、越王</b>；夫差的是 <b>波、北伐、太子、被、诸侯、君王、齐、诛、吴</b>。
+共享显著搭配 <b>0</b> 个 —— 说明文本把两个国君放进<b>两套不同的语义场</b>。</p>
+
+<h2>「夫差」的显著搭配（9 个，p&lt;0.05）</h2>
+<table class='grid'><thead><tr><th>collocate</th><th>obs_local</th><th>obs_global</th><th>exp_local</th><th>ratio_local</th><th>p_value</th><th>adjusted_p_value</th><th>log_dice</th><th>mi</th><th>t_score</th><th>log_likelihood</th><th>z_score</th><th>dice</th></tr></thead><tbody><tr><td class='w'>波<div class='note'>太子波之子（继嗣出身）</div></td><td>2</td><td>2</td><td>0.0122</td><td>164</td><td class='p'>3.693e-05</td><td class='p'>0.0004432</td><td>11.36</td><td>7.357</td><td>1.406</td><td>20.43</td><td>18</td><td>0.16</td></tr><tr><td class='w'>北伐<div class='note'>夫差两次「北伐齐」——对外扩张</div></td><td>2</td><td>4</td><td>0.02439</td><td>81.99</td><td class='p'>0.0002198</td><td class='p'>0.001319</td><td>11.25</td><td>6.357</td><td>1.397</td><td>14.91</td><td>12.65</td><td>0.1481</td></tr><tr><td class='w'>太子<div class='note'>立为太子、太子友——王位继承</div></td><td>3</td><td>44</td><td>0.2683</td><td>11.18</td><td class='p'>0.002449</td><td class='p'>0.009796</td><td>10.52</td><td>3.483</td><td>1.577</td><td>9.249</td><td>5.273</td><td>0.08955</td></tr><tr><td class='w'>被<div class='note'>被甲——亲征的武备</div></td><td>2</td><td>16</td><td>0.09757</td><td>20.5</td><td class='p'>0.00419</td><td class='p'>0.01257</td><td>10.71</td><td>4.357</td><td>1.345</td><td>8.539</td><td>6.09</td><td>0.1026</td></tr><tr><td class='w'>诸侯<div class='note'>合诸侯于黄池——争霸</div></td><td>3</td><td>70</td><td>0.4269</td><td>7.028</td><td class='p'>0.009023</td><td class='p'>0.02019</td><td>10.05</td><td>2.813</td><td>1.486</td><td>6.697</td><td>3.938</td><td>0.06452</td></tr><tr><td class='w'>君王<div class='note'>辱吾君王于诸侯／孤臣夫差——尊号与自贬</div></td><td>2</td><td>26</td><td>0.1586</td><td>12.61</td><td class='p'>0.0109</td><td class='p'>0.02019</td><td>10.39</td><td>3.657</td><td>1.302</td><td>6.615</td><td>4.625</td><td>0.08163</td></tr><tr><td class='w'>齐<div class='note'>北伐的对象国</div></td><td>2</td><td>29</td><td>0.1769</td><td>11.31</td><td class='p'>0.01346</td><td class='p'>0.02019</td><td>10.3</td><td>3.499</td><td>1.289</td><td>6.198</td><td>4.335</td><td>0.07692</td></tr><tr><td class='w'>诛<div class='note'>不诛越王／夫差之诛——生杀与败亡</div></td><td>2</td><td>29</td><td>0.1769</td><td>11.31</td><td class='p'>0.01346</td><td class='p'>0.02019</td><td>10.3</td><td>3.499</td><td>1.289</td><td>6.198</td><td>4.335</td><td>0.07692</td></tr><tr><td class='w'>吴<div class='note'>夫差的国</div></td><td>3</td><td>126</td><td>0.7684</td><td>3.904</td><td class='p'>0.04201</td><td class='p'>0.05602</td><td>9.366</td><td>1.965</td><td>1.288</td><td>3.785</td><td>2.546</td><td>0.04027</td></tr></tbody></table>
+<p class='kw'><b>北伐</b></p><ul class='kwic'><li>十一年夫差北伐齐</li><li>十二年夫差复北伐齐</li></ul><p class='kw'><b>齐</b></p><ul class='kwic'><li>十一年夫差北伐齐</li><li>十二年夫差复北伐齐</li></ul><p class='kw'><b>诸侯</b></p><ul class='kwic'><li>吴王夫差大惧合诸侯谋曰吾道辽远无会前进孰利</li><li>今国之父兄日请于孤曰昔夫差辱吾君王于诸侯长为天下所耻</li><li>吴告急于夫差夫差方会诸侯于黄池恐天下闻之即密不令泄</li></ul><p class='kw'><b>太子</b></p><ul class='kwic'><li>波太子夫差日夜告于伍胥曰王欲立太子非我而谁当立</li><li>今太子不禄早失侍御今王欲立太子者莫大乎波秦之子夫差</li><li>立夫差为太子使太子屯兵守楚留止自治宫室立射台于安里华池在平昌南城宫在长乐</li></ul><p class='kw'><b>诛</b></p><ul class='kwic'><li>夫差遂不诛越王令驾车养马秘于宫室之中</li><li>夫差之诛也谓臣曰狡兔死良犬烹敌国灭谋臣亡</li></ul><p class='kw'><b>被</b></p><ul class='kwic'><li>夫差昏秣马食士服兵被甲勒马衔枚出火于造闇行而进</li><li>今齐不贤于楚又不恭王命以远辟兄弟之国夫差不忍其恶被甲带径至艾陵天福于吴齐师还锋而退</li></ul>
+<h2>「勾践」的显著搭配（11 个，p&lt;0.05）</h2>
+<table class='grid'><thead><tr><th>collocate</th><th>obs_local</th><th>obs_global</th><th>exp_local</th><th>ratio_local</th><th>p_value</th><th>adjusted_p_value</th><th>log_dice</th><th>mi</th><th>t_score</th><th>log_likelihood</th><th>z_score</th><th>dice</th></tr></thead><tbody><tr><td class='w'>东海<div class='note'>「东海（役臣／贱臣）勾践」——自贬自称</div></td><td>3</td><td>5</td><td>0.06018</td><td>49.85</td><td class='p'>1.694e-05</td><td class='p'>0.0002203</td><td>10.97</td><td>5.64</td><td>1.697</td><td>19.87</td><td>11.98</td><td>0.1224</td></tr><tr><td class='w'>范蠡<div class='note'>首席谋臣，入吴与伐吴两阶段皆在</div></td><td>6</td><td>66</td><td>0.7944</td><td>7.553</td><td class='p'>0.0001429</td><td class='p'>0.0006255</td><td>10.8</td><td>2.917</td><td>2.125</td><td>14.38</td><td>5.841</td><td>0.1091</td></tr><tr><td class='w'>役<div class='note'>役臣——以仆役自居</div></td><td>2</td><td>2</td><td>0.02407</td><td>83.09</td><td class='p'>0.0001443</td><td class='p'>0.0006255</td><td>10.48</td><td>6.377</td><td>1.397</td><td>17.69</td><td>12.74</td><td>0.08696</td></tr><tr><td class='w'>下臣<div class='note'>「下臣勾践」——对吴王自称</div></td><td>2</td><td>3</td><td>0.03611</td><td>55.39</td><td class='p'>0.0004296</td><td class='p'>0.001396</td><td>10.45</td><td>5.792</td><td>1.389</td><td>13.9</td><td>10.34</td><td>0.08511</td></tr><tr><td class='w'>稽首<div class='note'>叩头至地，臣服之礼</div></td><td>2</td><td>5</td><td>0.06018</td><td>33.23</td><td class='p'>0.001409</td><td class='p'>0.003664</td><td>10.39</td><td>5.055</td><td>1.372</td><td>11.04</td><td>7.908</td><td>0.08163</td></tr><tr><td class='w'>闻于<div class='note'>闻于左右／周室——经营舆论</div></td><td>2</td><td>6</td><td>0.07221</td><td>27.7</td><td class='p'>0.002097</td><td class='p'>0.003895</td><td>10.36</td><td>4.792</td><td>1.363</td><td>10.15</td><td>7.174</td><td>0.08</td></tr><tr><td class='w'>再拜<div class='note'>再拜稽首，臣服套语</div></td><td>2</td><td>6</td><td>0.07221</td><td>27.7</td><td class='p'>0.002097</td><td class='p'>0.003895</td><td>10.36</td><td>4.792</td><td>1.363</td><td>10.15</td><td>7.174</td><td>0.08</td></tr><tr><td class='w'>臣<div class='note'>称臣／臣属</div></td><td>6</td><td>133</td><td>1.601</td><td>3.748</td><td class='p'>0.005532</td><td class='p'>0.00899</td><td>10.12</td><td>1.906</td><td>1.796</td><td>7.277</td><td>3.477</td><td>0.0678</td></tr><tr><td class='w'>不忍<div class='note'>不忍其言／对使者——犹疑</div></td><td>2</td><td>14</td><td>0.1685</td><td>11.87</td><td class='p'>0.01194</td><td class='p'>0.01725</td><td>10.14</td><td>3.569</td><td>1.295</td><td>6.499</td><td>4.462</td><td>0.06897</td></tr><tr><td class='w'>二<div class='note'>数词（二君／二子），噪声</div></td><td>2</td><td>19</td><td>0.2287</td><td>8.746</td><td class='p'>0.02157</td><td class='p'>0.02804</td><td>10.02</td><td>3.129</td><td>1.253</td><td>5.316</td><td>3.704</td><td>0.06349</td></tr><tr><td class='w'>越王<div class='note'>勾践的君号，与名讳并置</div></td><td>6</td><td>193</td><td>2.323</td><td>2.583</td><td class='p'>0.02973</td><td class='p'>0.03513</td><td>9.696</td><td>1.369</td><td>1.501</td><td>4.154</td><td>2.413</td><td>0.05063</td></tr></tbody></table>
+<p class='kw'><b>东海</b></p><ul class='kwic'><li>子贡馆五日越使果来曰东海役臣勾践之使者臣种敢修下吏少闻于左右昔孤不幸少失前人内不自量抵罪上国军败身辱逋逃会稽赖王赐得奉祭祀死且不忘</li><li>于是入吴见夫差稽首再拜称臣曰东海贱臣勾践上愧皇天下负后土不裁功力污辱王之军士抵罪边境</li><li>乃使大夫种献之于吴王曰东海役臣臣孤勾践使臣种敢因下吏闻于左右赖大王之力窃为小殿有余材谨再拜献之</li></ul><p class='kw'><b>役</b></p><ul class='kwic'><li>子贡馆五日越使果来曰东海役臣勾践之使者臣种敢修下吏少闻于左右昔孤不幸少失前人内不自量抵罪上国军败身辱逋逃会稽赖王赐得奉祭祀死且不忘</li><li>乃使大夫种献之于吴王曰东海役臣臣孤勾践使臣种敢因下吏闻于左右赖大王之力窃为小殿有余材谨再拜献之</li></ul><p class='kw'><b>下臣</b></p><ul class='kwic'><li>越君勾践下臣种敢言之昔天以越赐吴吴不肯受是天所反</li><li>于是范蠡与越王俱起为吴王寿其辞曰下臣勾践从小臣范蠡奉觞上千岁之寿辞曰皇在上令昭下四时并心察慈仁者大王</li></ul><p class='kw'><b>稽首</b></p><ul class='kwic'><li>越王勾践再拜稽首曰孤闻祸与福为邻今大夫之吊孤之福矣</li><li>遣下吏太宰嚭王孙骆解冠帻肉袒徒跣稽首谢于勾践国可安存也身可不死矣</li><li>于是入吴见夫差稽首再拜称臣曰东海贱臣勾践上愧皇天下负后土不裁功力污辱王之军士抵罪边境</li></ul><p class='kw'><b>范蠡</b></p><ul class='kwic'><li>越王勾践五年五月与大夫种范蠡入臣于吴臣皆送至浙江之上</li><li>于是范蠡与越王俱起为吴王寿其辞曰下臣勾践从小臣范蠡奉觞上千岁之寿辞曰皇在上令昭下四时并心察慈仁者大王</li><li>乃使相国范蠡进曰越王勾践窃有二遗女越国洿下困迫不敢稽留谨使臣蠡献之</li></ul><p class='kw'><b>不忍</b></p><ul class='kwic'><li>勾践不忍其言将许之成</li><li>勾践曰吾欲听子言不忍对其使者</li></ul>
+
+<h2>对比：两种国君形象</h2>
+<table class="cmp">
+<tr><th>维度</th><th>夫差</th><th>勾践</th></tr>
+<tr><td>核心语义场</td><td>北伐、齐、诸侯、诛</td><td>东海、役、下臣、稽首、再拜</td></tr>
+<tr><td>动作方向</td><td>对外扩张、争霸（合诸侯于黄池）</td><td>对内自贬、忍辱（称臣、行臣服之礼）</td></tr>
+<tr><td>关系／继承</td><td>太子、波（继嗣）、君王</td><td>臣、范蠡（倚重谋臣）</td></tr>
+<tr><td>性格线索</td><td>被甲亲征、诛（生杀予夺）</td><td>不忍（犹疑）、闻于（经营舆论）</td></tr>
+<tr><td>结局意象</td><td>「夫差之诛」——败亡被杀</td><td>复国、再拜——由辱转兴</td></tr>
+<tr><td>显著搭配数</td><td>9</td><td>11</td></tr>
+</table>
+
+<div class="cluster">
+<h3>解读</h3>
+<p><span class="tag">夫差</span>搭配词几乎全在<b>横向的对外轴</b>上：<b>北伐／齐</b>是两次北征齐国，
+<b>诸侯</b>指向黄池争霸，<b>诛</b>是「不诛越王」与「夫差之诛」的生杀与败亡，
+<b>太子／波</b>关乎继嗣，<b>被</b>（被甲）是亲征武备。文本由此把夫差写成<b>好大喜功、
+向外用兵的霸主</b>，其关键词预演了他的结局。</p>
+<p><span class="tag">勾践</span>搭配词则全在<b>纵向的自贬轴</b>与<b>君臣轴</b>上：
+<b>东海（役臣／贱臣）、役、下臣、稽首、再拜、臣</b>是成套的臣服辞令，
+<b>范蠡</b>标明他对谋臣的依赖，<b>不忍</b>点出犹疑，<b>闻于</b>指外交舆论的经营。
+文本由此把勾践写成<b>忍辱负重、依靠谋臣的复国之君</b>。</p>
+<p>值得注意的是「君王」一词：它既出现在越人控诉
+「夫差辱吾君王于诸侯」（夫差羞辱勾践），也出现在
+「孤臣夫差……得与君王结成以归」（夫差向勾践自称「孤臣」）。
+同一个尊号把两人的<b>地位翻转</b>并置——这正是全书由吴转越的结构缩影。</p>
+</div>
+
+<h2>方法与局限</h2>
+<ul>
+<li>window=5，左右各 5 词，跨句共现不计；换 horizon 结果会变。</li>
+<li>样本小：夫差仅 23 词次、勾践 44 词次，多数 obs_local=2–3，低頻搭配不穩。</li>
+<li>已人工剔除 97 个虚词／连接词；过滤只影响输出，不改统计量。</li>
+<li>分词基于简体排印本 + jieba + 人名词典；换分词或校本结果会变。</li>
+<li>显著≠语义：只说明共現超出偶然，仍需 close reading。</li>
+</ul>
+
+<footer>
+数据源：趙曄《吳越春秋》（公有領域），jieba 分词为 <code>data.txt</code>；
+搭配由 <code>find_collocates</code> 计算，脚本 <code>compare_rulers.py</code>。
+Course DHG502, Week 4.
+</footer>
+</div>
+</body>
+</html>

@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>《吳越春秋》「勾践」的显著搭配</title>
+<style>
+:root{--ink:#1c1a17;--paper:#f6f1e6;--line:#d8cdb4;--accent:#8c2f1e;--gold:#a8791f;--muted:#6b6253}
+*{box-sizing:border-box}
+body{margin:0;background:var(--paper);color:var(--ink);font-family:"Noto Serif SC","Songti SC",Georgia,serif;line-height:1.8}
+.wrap{max-width:1000px;margin:0 auto;padding:48px 22px 80px}
+h1{font-size:1.85rem;margin:0 0 4px}
+.sub{color:var(--muted);margin:0 0 26px}
+h2{font-size:1.15rem;border-bottom:2px solid var(--line);padding-bottom:6px;margin-top:44px}
+h3{font-size:1rem;margin:20px 0 6px;color:var(--accent)}
+.cards{display:flex;gap:14px;flex-wrap:wrap;margin:22px 0}
+.card{flex:1 1 150px;background:#fff;border:1px solid var(--line);border-radius:10px;padding:14px 18px}
+.card .n{font-size:1.7rem;font-weight:700;color:var(--accent);line-height:1.15}
+.card .lab{font-size:.8rem;color:var(--muted);margin-top:4px}
+table{border-collapse:collapse;width:100%;font-size:.86rem}
+td,th{border-bottom:1px solid var(--line);padding:6px 7px;text-align:right;vertical-align:top}
+th{color:var(--muted);font-weight:600;font-size:.76rem;white-space:nowrap}
+td.w{text-align:left;font-weight:700;font-size:.95rem;white-space:nowrap}
+td .note{font-weight:400;font-size:.72rem;color:var(--muted);max-width:200px;white-space:normal}
+td.p{color:var(--accent)}
+.grid td:first-child,.grid th:first-child{position:sticky;left:0;background:var(--paper)}
+.kwic{list-style:none;padding:0;margin:10px 0 4px}
+.kwic li{background:#fff;border-left:3px solid var(--gold);padding:7px 12px;margin:6px 0;font-size:.85rem;color:#3a352d}
+.cluster{background:#fff;border:1px solid var(--line);border-radius:10px;padding:6px 20px 16px;margin:14px 0}
+.tag{display:inline-block;background:#efe7d5;color:var(--accent);border-radius:12px;padding:1px 10px;font-size:.78rem;margin:0 5px 0 0}
+.note-box{background:#fff;border-left:4px solid var(--gold);padding:12px 16px;font-size:.9rem;color:var(--muted);margin-top:16px}
+ul{padding-left:22px}
+footer{margin-top:48px;color:var(--muted);font-size:.82rem;border-top:1px solid var(--line);padding-top:14px}
+code{background:#efe7d5;padding:1px 5px;border-radius:4px}
+</style>
+</head>
+<body>
+<div class="wrap">
+<h1>《吳越春秋》「勾践」的显著搭配</h1>
+<p class="sub">Statistically significant collocates of <b>勾践</b> —
+window method (horizon 5), Fisher exact test (one-sided), Benjamini–Hochberg FDR,
+function words removed, p &lt; 0.05.</p>
+
+<div class="cards">
+  <div class="card"><div class="n">44</div><div class="lab">「勾践」全篇词次<br>token frequency</div></div>
+  <div class="card"><div class="n">43</div><div class="lab">含「勾践」的句子<br>sentences</div></div>
+  <div class="card"><div class="n">11</div><div class="lab">显著搭配词（p&lt;0.05）<br>significant collocates</div></div>
+  <div class="card"><div class="n">28</div><div class="lab">去连接词前候选<br>candidates before stopwords</div></div>
+</div>
+
+<h2>方法与参数</h2>
+<p>用 <code>qhchina.analytics.collocations.find_collocates</code> 的
+<b>window</b> 方法：以「勾践」为中心左右各取 5 个词构成窗口，窗口内共现的词即为候选搭配。
+每个候选与「勾践」构成 2×2 列联表，用 Fisher 精确检验（单侧 greater）求 p 值，
+经 Benjamini–Hochberg 控制 FDR。<code>obs_local</code> 为窗口共现次数，
+<code>obs_global</code> 为搭配词全篇词频，<code>ratio_local = obs_local / exp_local</code>
+（&gt;1 表示互相吸引），<code>logDice</code> 与 <code>MI</code> 为搭配强度。
+先剔除「之／于／而／不／也／从／曰／谓」等虚词连接词，再保留原始 p &lt; 0.05。</p>
+
+<h2>结果表</h2>
+<table class='grid'><thead><tr><th>collocate</th><th>obs_local</th><th>obs_global</th><th>exp_local</th><th>ratio_local</th><th>p_value</th><th>adjusted_p_value</th><th>log_dice</th><th>mi</th><th>t_score</th><th>log_likelihood</th><th>z_score</th><th>dice</th></tr></thead><tbody><tr><td class='w'>东海<div class='note'>「东海（役臣／贱臣）勾践」——向吴王自贬时的固定自称</div></td><td>3</td><td>5</td><td>0.06018</td><td>49.85</td><td class='p'>1.694e-05</td><td class='p'>0.0002203</td><td>10.97</td><td>5.64</td><td>1.697</td><td>19.87</td><td>11.98</td><td>0.1224</td></tr><tr><td class='w'>范蠡<div class='note'>勾践的首席谋臣，贯穿入吴与伐吴两个阶段</div></td><td>6</td><td>66</td><td>0.7944</td><td>7.553</td><td class='p'>0.0001429</td><td class='p'>0.0006255</td><td>10.8</td><td>2.917</td><td>2.125</td><td>14.38</td><td>5.841</td><td>0.1091</td></tr><tr><td class='w'>役<div class='note'>役臣／役使，自我定位为吴国的仆役</div></td><td>2</td><td>2</td><td>0.02407</td><td>83.09</td><td class='p'>0.0001443</td><td class='p'>0.0006255</td><td>10.48</td><td>6.377</td><td>1.397</td><td>17.69</td><td>12.74</td><td>0.08696</td></tr><tr><td class='w'>下臣<div class='note'>「下臣勾践」——对吴王自称，臣属语</div></td><td>2</td><td>3</td><td>0.03611</td><td>55.39</td><td class='p'>0.0004296</td><td class='p'>0.001396</td><td>10.45</td><td>5.792</td><td>1.389</td><td>13.9</td><td>10.34</td><td>0.08511</td></tr><tr><td class='w'>稽首<div class='note'>叩头至地，臣服之礼</div></td><td>2</td><td>5</td><td>0.06018</td><td>33.23</td><td class='p'>0.001409</td><td class='p'>0.003664</td><td>10.39</td><td>5.055</td><td>1.372</td><td>11.04</td><td>7.908</td><td>0.08163</td></tr><tr><td class='w'>闻于<div class='note'>闻于左右／闻于周室，经营名声与舆论</div></td><td>2</td><td>6</td><td>0.07221</td><td>27.7</td><td class='p'>0.002097</td><td class='p'>0.003895</td><td>10.36</td><td>4.792</td><td>1.363</td><td>10.15</td><td>7.174</td><td>0.08</td></tr><tr><td class='w'>再拜<div class='note'>再拜稽首，臣服与献礼的礼仪套语</div></td><td>2</td><td>6</td><td>0.07221</td><td>27.7</td><td class='p'>0.002097</td><td class='p'>0.003895</td><td>10.36</td><td>4.792</td><td>1.363</td><td>10.15</td><td>7.174</td><td>0.08</td></tr><tr><td class='w'>臣<div class='note'>称臣／臣属，勾践的自我定位</div></td><td>6</td><td>133</td><td>1.601</td><td>3.748</td><td class='p'>0.005532</td><td class='p'>0.00899</td><td>10.12</td><td>1.906</td><td>1.796</td><td>7.277</td><td>3.477</td><td>0.0678</td></tr><tr><td class='w'>不忍<div class='note'>不忍其言／不忍对使者，性格中的犹疑</div></td><td>2</td><td>14</td><td>0.1685</td><td>11.87</td><td class='p'>0.01194</td><td class='p'>0.01725</td><td>10.14</td><td>3.569</td><td>1.295</td><td>6.499</td><td>4.462</td><td>0.06897</td></tr><tr><td class='w'>二<div class='note'>数词（二君／二子），语义解释力弱</div></td><td>2</td><td>19</td><td>0.2287</td><td>8.746</td><td class='p'>0.02157</td><td class='p'>0.02804</td><td>10.02</td><td>3.129</td><td>1.253</td><td>5.316</td><td>3.704</td><td>0.06349</td></tr><tr><td class='w'>越王<div class='note'>勾践的君号，与名讳并置</div></td><td>6</td><td>193</td><td>2.323</td><td>2.583</td><td class='p'>0.02973</td><td class='p'>0.03513</td><td>9.696</td><td>1.369</td><td>1.501</td><td>4.154</td><td>2.413</td><td>0.05063</td></tr></tbody></table>
+<p class="note-box">p 值越小、ratio 與 logDice 越大，表示「勾践」與該詞的共現越不可能出於偶然。
+注意 <code>obs_local</code> 普遍只有 2–6 次，故個別數值不宜過度解讀。</p>
+
+<h2>这些搭配说明了什么</h2>
+
+<div class="cluster">
+<h3><span class="tag">臣服套語</span> 东海 · 役 · 下臣 · 臣 · 稽首 · 再拜</h3>
+<p>最显著的一批词几乎全部来自勾践向吴王自贬、称臣、行礼的<b>固定外交辞令</b>：
+「东海役臣勾践」「东海贱臣勾践」「下臣勾践」「稽首再拜称臣」。它们不是随意出现的实词，
+而是同一套屈辱语域的组成部分。可见文本对勾践的第一重塑造是<b>被侮辱、被羁押的罪臣</b>：
+他先以仆役自居，再以「稽首再拜」完成臣服仪节。勾践的君王身份在此被暂时悬置。</p>
+<ul class='kwic'><li>子贡馆五日越使果来曰东海役臣勾践之使者臣种敢修下吏少闻于左右昔孤不幸少失前人内不自量抵罪上国军败身辱逋逃会稽赖王赐得奉祭祀死且不忘</li><li>于是入吴见夫差稽首再拜称臣曰东海贱臣勾践上愧皇天下负后土不裁功力污辱王之军士抵罪边境</li><li>乃使大夫种献之于吴王曰东海役臣臣孤勾践使臣种敢因下吏闻于左右赖大王之力窃为小殿有余材谨再拜献之</li></ul>
+<ul class='kwic'><li>子贡馆五日越使果来曰东海役臣勾践之使者臣种敢修下吏少闻于左右昔孤不幸少失前人内不自量抵罪上国军败身辱逋逃会稽赖王赐得奉祭祀死且不忘</li><li>乃使大夫种献之于吴王曰东海役臣臣孤勾践使臣种敢因下吏闻于左右赖大王之力窃为小殿有余材谨再拜献之</li></ul>
+<ul class='kwic'><li>越君勾践下臣种敢言之昔天以越赐吴吴不肯受是天所反</li><li>于是范蠡与越王俱起为吴王寿其辞曰下臣勾践从小臣范蠡奉觞上千岁之寿辞曰皇在上令昭下四时并心察慈仁者大王</li></ul>
+<ul class='kwic'><li>越王勾践再拜稽首曰孤闻祸与福为邻今大夫之吊孤之福矣</li><li>遣下吏太宰嚭王孙骆解冠帻肉袒徒跣稽首谢于勾践国可安存也身可不死矣</li><li>于是入吴见夫差稽首再拜称臣曰东海贱臣勾践上愧皇天下负后土不裁功力污辱王之军士抵罪边境</li></ul>
+</div>
+
+<div class="cluster">
+<h3><span class="tag">君臣網絡</span> 范蠡 · 越王 · 臣</h3>
+<p>「范蠡」是勾践最稳定的共现者之一（6 次，ratio 7.6，logDice 10.8）。
+从卷第七「与大夫种、范蠡入臣于吴」，到归国后「复问范蠡曰：可伐矣」，
+范蠡贯穿了<b>受辱</b>与<b>复仇</b>两个阶段。统计上的强关联，正对应叙事上
+「君依赖臣」的结构：勾践的重大抉择几乎都与范蠡商议而定。
+而「越王」与「勾践」同现，则显示同一人物在<b>君号与名讳</b>之间被反复并置——</p>
+<ul class='kwic'><li>越王勾践五年五月与大夫种范蠡入臣于吴臣皆送至浙江之上</li><li>于是范蠡与越王俱起为吴王寿其辞曰下臣勾践从小臣范蠡奉觞上千岁之寿辞曰皇在上令昭下四时并心察慈仁者大王</li><li>乃使相国范蠡进曰越王勾践窃有二遗女越国洿下困迫不敢稽留谨使臣蠡献之</li></ul>
+<ul class='kwic'><li>越王勾践再拜稽首曰孤闻祸与福为邻今大夫之吊孤之福矣</li><li>越王勾践五年五月与大夫种范蠡入臣于吴臣皆送至浙江之上</li><li>于是范蠡与越王俱起为吴王寿其辞曰下臣勾践从小臣范蠡奉觞上千岁之寿辞曰皇在上令昭下四时并心察慈仁者大王</li></ul>
+</div>
+
+<div class="cluster">
+<h3><span class="tag">性格／輿論</span> 不忍 · 闻于</h3>
+<p>「不忍」只出现 2 次却达显著：一次是不忍听吴使乞成之言，一次是不忍面对吴使。
+这与范蠡、文种的果决形成对照，透露出勾践性格中的<b>犹疑与妇人之仁</b>，
+也解释了为何灭吴的最后一步常由臣下推动。「闻于」则多出现在
+「闻于左右」「闻于周室」等句中，指向勾践对<b>名声与外交舆论</b>的经营：
+卑辞以事吴、示义于周室，都是复国策略的一部分。</p>
+<ul class='kwic'><li>勾践不忍其言将许之成</li><li>勾践曰吾欲听子言不忍对其使者</li></ul>
+<ul class='kwic'><li>乃使大夫种献之于吴王曰东海役臣臣孤勾践使臣种敢因下吏闻于左右赖大王之力窃为小殿有余材谨再拜献之</li><li>勾践恐民不信使以征不义闻于周室令诸侯不怨于外</li></ul>
+</div>
+
+<div class="cluster">
+<h3><span class="tag">需存疑</span> 二</h3>
+<p>「二」是数词，多出自「二君」「二子」等结构，语义解释力弱，
+更可能是窗口切分与高频词造成的统计噪声，宜忽略。</p>
+</div>
+
+<h2>总体解读</h2>
+<p>勾践的显著搭配几乎<b>不含战场实词</b>（伐、战、兵、军等都没有进入显著名单），
+却密集地落在「臣服礼仪」与「君臣谋划」两类词上。这一分布提示：
+在《吳越春秋》的叙事中，勾践的核心形象不是战将，而是<b>忍辱负重、依靠谋臣的复国之君</b>。
+他的君王性通过两套动作实现——对外以「东海役臣／下臣」的姿态蛰伏，
+对内以「问范蠡」的方式运筹。军事行动的执行更多落在越王（君号）、范蠡、文种身上，
+而「勾践」这个名字则被牢牢绑定在屈辱与谋划的语境里。</p>
+
+<h2>方法与局限</h2>
+<ul>
+<li><b>窗口法</b>：只看勾践左右各 5 词，跨句共现不计；换 horizon 结果会变。</li>
+<li><b>小样本</b>：勾践全篇仅 44 词次，候选 <code>obs_local</code> 多为 2–6，
+p 值与 logDice 波动大，低頻搭配不穩定。</li>
+<li><b>切词影响</b>：底本为简体排印本，经 jieba 分词并加入人名词典；分词不同，搭配亦不同。</li>
+<li><b>虚词过滤</b>：已剔除 97 个虚词／连接词（<code>goujian_collocates.py</code> 中 <code>STOPWORDS</code>），
+过滤只影响输出，不改变统计量。</li>
+<li><b>显著 ≠ 语义</b>：Fisher 显著只说明共現超出偶然，仍需回读上下文判断是否構成真正的「搭配」。</li>
+</ul>
+
+<footer>
+数据源：趙曄《吳越春秋》（後漢，公有領域），经 jieba 分词为 <code>data.txt</code>；
+搭配分析由 <code>find_collocates</code> 完成，脚本 <code>goujian_collocates.py</code>。
+Course DHG502, Week 4.
+</footer>
+</div>
+</body>
+</html>
