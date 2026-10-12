@@ -12,7 +12,7 @@ import html
 
 from qhchina.analytics.collocations import find_collocates
 
-DATA = "data.txt"
+DATA = "data/data.txt"
 OUT = "goujian_collocates.txt"
 HTML_OUT = "goujian_collocates.html"
 TARGET = "勾践"

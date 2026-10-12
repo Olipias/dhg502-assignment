@@ -1,0 +1,12 @@
+# Python dependencies for Assignment 1
+#
+#   pip install -r requirements.txt
+#
+# The analysis itself only needs jieba (segmentation) and qhchina
+# (find_collocates). qhchina pulls in numpy/pandas/scipy and their own
+# dependencies automatically; the explicit pins below are the direct ones.
+jieba>=0.42.1
+qhchina>=0.2.7
+numpy>=2.0
+pandas>=2.2
+scipy>=1.11

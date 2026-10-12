@@ -12,7 +12,7 @@ import html
 
 from qhchina.analytics.collocations import find_collocates
 
-DATA = "data.txt"
+DATA = "data/data.txt"
 OUT = "compare_rulers.txt"
 HTML_OUT = "compare_rulers.html"
 TARGETS = ["夫差", "勾践"]

@@ -27,8 +27,8 @@ from collections import Counter
 
 import jieba
 
-SRC = "../吴越春秋.txt"
-DATA = "data.txt"
+SRC = "data/吴越春秋.txt"
+DATA = "data/data.txt"
 OUT = "collocation_results.txt"
 SPAN = 5  # max positional distance when counting co-occurring pairs
 
