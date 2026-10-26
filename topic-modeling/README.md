@@ -58,6 +58,9 @@ If the raw file is absent:
 - `output/report.html` — a self-contained HTML report of all findings, with the
   chart embedded as base64.
 
+Topic numbers in the report and chart are displayed **1–10** (the model is
+trained with 10 topics; display numbering is one-based).
+
 ## Result summary
 
 - Parsed documents: **388**

@@ -351,7 +351,9 @@ def write_decade_table(
     with path.open("w", encoding="utf-8") as handle:
         handle.write(
             "decade\tn_docs\t"
-            + "\t".join(f"topic_{topic}" for topic in range(averages.shape[1]))
+            + "\t".join(
+                f"topic_{topic + 1}" for topic in range(averages.shape[1])
+            )
             + "\n"
         )
         for decade, count, row in zip(decades, counts, averages):
@@ -394,7 +396,7 @@ def plot_topics_by_decade(
     bottom = np.zeros(len(decades))
     for topic in range(model.n_topics):
         label = (
-            f"主题 {topic}："
+            f"主题 {topic + 1}："
             + "、".join(word for word, _ in topic_words[topic])
         )
         ax.bar(
@@ -418,7 +420,7 @@ def plot_topics_by_decade(
     ax.set_ylim(0, 1)
     ax.set_yticks(np.arange(0, 1.01, 0.2))
     ax.set_yticklabels([f"{int(value * 100)}%" for value in np.arange(0, 1.01, 0.2)])
-    ax.set_title("各年代平均主题比例（LDA，10 个主题）", pad=14)
+    ax.set_title("各年代平均主题比例（LDA，10 个主题，编号 1–10）", pad=14)
     ax.grid(axis="y", color="#999999", alpha=0.25, linewidth=0.7)
     ax.set_axisbelow(True)
     ax.spines["top"].set_visible(False)
@@ -519,7 +521,7 @@ def write_html_report(
             f"""
             <article class="topic-card" style="--topic-color:{color}">
               <div class="topic-card-head">
-                <div class="topic-number"><span class="topic-dot"></span>主题 {topic}</div>
+                <div class="topic-number"><span class="topic-dot"></span>主题 {topic + 1}</div>
                 <div class="topic-top3">{escape("、".join(word for word, _ in top3[topic]))}</div>
               </div>
               <div class="word-chips">{chips}</div>
@@ -532,7 +534,7 @@ def write_html_report(
         )
 
     matrix_head = "".join(
-        f'<th><span class="mini-dot" style="background:{color_for(topic)}"></span>主题 {topic}</th>'
+        f'<th><span class="mini-dot" style="background:{color_for(topic)}"></span>主题 {topic + 1}</th>'
         for topic in range(model.n_topics)
     )
     matrix_rows = []
@@ -557,7 +559,7 @@ def write_html_report(
     for decade, count, row in zip(decades, counts, averages):
         order = np.argsort(-row)[:2]
         parts = [
-            f"主题 {int(topic)}（{row[topic] * 100:.1f}%；"
+            f"主题 {int(topic) + 1}（{row[topic] * 100:.1f}%；"
             f"{escape('、'.join(word for word, _ in top3[int(topic)]))}）"
             for topic in order
         ]
@@ -946,7 +948,7 @@ def write_html_report(
       <div class="section-head">
         <div class="section-kicker">Topics</div>
         <h2>10 个 LDA 主题</h2>
-        <p class="section-intro">每个主题展示概率最高的 10 个词（括号内为词在主题中的概率）以及主题概率最高的 2 篇文档。主题编号本身没有固定语义，顺序由模型输出决定。</p>
+        <p class="section-intro">共 10 个主题，编号为 1–10。每个主题展示概率最高的 10 个词（括号内为词在主题中的概率）以及主题概率最高的 2 篇文档。主题编号本身没有固定语义，顺序由模型输出决定。</p>
       </div>
       <div class="topic-grid">{"".join(topic_cards)}</div>
     </section>
@@ -1063,7 +1065,7 @@ def format_report(
 
     topics = model.get_topics(n_words=10)
     for topic_id, topic_words in enumerate(topics):
-        lines.append(f"Topic {topic_id}")
+        lines.append(f"Topic {topic_id + 1}")
         lines.append(
             "  Words: "
             + ", ".join(f"{word} ({prob:.4f})" for word, prob in topic_words)
