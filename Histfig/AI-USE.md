@@ -1,18 +1,19 @@
 # AI-USE.md
 
 **Course / assignment:** DHG502 — Assignment 2 (Lin Huiyin corpus and HistFig dialogue evaluation)
-**Author:** Eric Li 李雨桐 (GitHub: Olipias) Cici 赵漪洋 (GitHub: yiyangzhap23)
+**Authors:** Eric Li 李雨桐 (GitHub: Olipias); Cici 赵漪洋 (GitHub: yiyangzhap23)
 **Date:** 2026-11-23
 
 This file records how generative-AI systems were used for this submission, as
 required. The assignment has two parts: a corpus of writings by and about 林徽因
 Lin Huiyin (1904–1955), and a paper evaluating two conversations with the
 instructor-provided **HistFig** historical-figure simulation. The corpus was a
-group submission; this statement covers the work I did on it and my individual
-paper. It does not describe other group members' use of AI or the instructor's
-configuration of HistFig. The corpus is human-authored source material; the
-AI-generated material in this submission is the HistFig dialogue itself, which
-is the **object of study**, not the author's prose.
+group submission; this statement covers the work we did on it and our paper. It
+describes the AI use of the named authors; it does not describe other group
+members' use of AI or the instructor's configuration of HistFig. The corpus is
+human-authored source material; the AI-generated material in this submission is
+the HistFig dialogue itself, which is the **object of study**, not the authors'
+prose.
 
 ---
 
@@ -71,9 +72,9 @@ The course deployment offered two retrieval settings used here:
 4. **Verification.** The agent helped write the comparison scripts behind
    `notes/verification.md`: cross-edition similarity with `difflib`, letter
    collation, and 20-character shingle containment for the architectural essays.
-   The author checked the resulting passages and decided what counted as a
+   The authors checked the resulting passages and decided what counted as a
    genuine variant, a lacuna, or a decoding failure.
-5. **Using HistFig as the object of study.** The author decided the question
+5. **Using HistFig as the object of study.** The authors decided the question
    sequence and ran the two conversations; HistFig generated the answers. The
    agent did not generate the dialogue or decide what counted as evidence.
 6. **Language editing.** The agent helped with grammar, punctuation and awkward
@@ -169,32 +170,32 @@ report similarity; check the character count and encoding. These produced the
 scripts in `raw/` and the notes in `notes/verification.md`, not the paper's
 argument.
 
-## 4. Important changes made by the author
+## 4. Important changes made by the authors
 
-- **Figure and corpus scope.** The author chose 林徽因 and decided which eleven
+- **Figure and corpus scope.** The authors chose 林徽因 and decided which eleven
   texts to include: her own writing, 林杉's biography, 梁启超's family letters,
   and 梁思成's architectural writings. The source list, editions and copyright
-  note are the author's.
-- **Research design.** The author designed the question sequence: general
+  note are the authors'.
+- **Research design.** The authors designed the question sequence: general
   persona questions first, then requests for precise evidence; one simple-search
   conversation and one agent-search conversation; repeated questions at
   different temperatures; misleading premises (Cambridge, McDonald's) and
   posthumous questions (1970). HistFig did not choose these tests.
-- **Evidence standard.** The author decided to judge every answer against the
+- **Evidence standard.** The authors decided to judge every answer against the
   eleven files rather than against plausibility or tone. This is why the paper
   distinguishes "supported", "partly supported" and "unsupported" claims, and
   why it treats the Foguang Temple measurements and the chicken-soup restaurant
   as failures even though they sound convincing.
-- **Corpus corrections.** The author checked the de-obfuscated text against
+- **Corpus corrections.** The authors checked the de-obfuscated text against
   independent editions, identified the mislabeled 七猫 chapter (王曾祺, not
   林徽因), rejected truncated previews, and decided which `□` marks were original
   lacunae.
-- **Paper.** The author is responsible for the paper's argument, the selection
+- **Paper.** The authors are responsible for the paper's argument, the selection
   of the six exchanges, the interpretation of the model's behaviour, and the
   final wording. The coding agent was used for language editing of parts of the
   draft, not for generating the analysis or conclusions.
 - **Repository decisions.** Which files to submit, which working files to keep
-  out of the submission, and the final folder layout were the author's decisions.
+  out of the submission, and the final folder layout were the authors' decisions.
 
 ## 5. How the output was checked
 
@@ -230,15 +231,15 @@ argument.
 ## 6. Declaration
 
 HistFig is an AI system, and its dialogue is the primary material of this paper.
-I used it as the instructor intended: to generate conversations for critical
-evaluation, not to produce historical evidence or to write my prose. The
+We used it as the instructor intended: to generate conversations for critical
+evaluation, not to produce historical evidence or to write our prose. The
 conversations are clearly marked as HistFig output and are analysed as model
 behaviour.
 
 The coding agent was used for the corpus pipeline, troubleshooting, repository
 housekeeping and language editing, as permitted by the course. The research
 question, the choice of texts and exchanges, the source judgments, the argument
-and the final wording are my responsibility. AI did not generate the paper's
+and the final wording are our responsibility. AI did not generate the paper's
 findings or conclusions.
 
 The corpus is human-authored source material. The HistFig answers are not
@@ -247,7 +248,7 @@ retrieval-augmented simulation does with the corpus, including where it invents,
 over-confabulates, or correctly refuses a premise.
 
 This statement was drafted with the coding agent from the session record and
-checked by the author.
+checked by the authors.
 
 ---
 
