@@ -96,6 +96,7 @@ answer.
 
 ## Files added for the paper
 
+- `Lin_Huiyin_RAG_Essay.docx` — the paper.
 - `AI-USE.md` — AI-use statement for the paper.
 - `error_log.csv` — error log for the two exported HistFig conversations.
 - `林徽因 - 你最喜欢的诗歌是什么.md` — exported conversation A (simple search).
