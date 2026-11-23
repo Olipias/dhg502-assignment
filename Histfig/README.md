@@ -94,6 +94,13 @@ question and see whether the system retrieves the same passage from different
 files. If the editions disagree, check the print source before trusting the
 answer.
 
+## Files added for the paper
+
+- `AI-USE.md` — AI-use statement for the paper.
+- `error_log.csv` — error log for the two exported HistFig conversations.
+- `林徽因 - 你最喜欢的诗歌是什么.md` — exported conversation A (simple search).
+- `林徽因 - 你最心爱的建筑是哪个.md` — exported conversation B (agent / research search).
+
 ## Submission
 
 Submit the contents of `texts/` (the eleven `.txt` files) together with

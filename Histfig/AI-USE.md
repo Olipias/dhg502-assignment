@@ -253,7 +253,7 @@ checked by the authors.
 ---
 
 **Repository note.** This public `Histfig/` folder contains the corpus, source
-list, the two exported conversations and this statement. The working download
-and cleaning scripts, the `raw/` evidence, `notes/verification.md`,
-`metadata.csv` and `SUBMISSION_CHECKLIST.md` are kept in the local assignment
-folder; they are not part of this public folder.
+list, the two exported conversations, the error log (`error_log.csv`) and this
+statement. The working download and cleaning scripts, the `raw/` evidence,
+`notes/verification.md`, `metadata.csv` and `SUBMISSION_CHECKLIST.md` are kept
+in the local assignment folder; they are not part of this public folder.
